@@ -9,4 +9,8 @@ ss.py
 *.spec
 /.idea/
 /.eggs/
+<<<<<<< HEAD
 /.env/
+=======
+/.env/
+>>>>>>> refs/remotes/origin/master
