@@ -8,3 +8,5 @@ ex.py
 ss.py
 *.spec
 /.idea/
+/.eggs/
+/.env/
