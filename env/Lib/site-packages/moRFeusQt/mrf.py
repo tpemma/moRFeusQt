@@ -143,6 +143,11 @@ class MoRFeus(object):
             yield start
             start += step
 
+    def freqRangeDown(self, start, end, step):
+        while end >= start:
+            yield end
+            end -= step
+
     # Frequency sweep routine, still needs a means to break out of
     # loop on some event..
 
@@ -152,7 +157,7 @@ class MoRFeus(object):
         step = int(step * 1000)
         
         freq_steps = list(self.freqRange(start_freq, end_freq, step))
-        freq_steps += list(self.freqRange(end_freq, start_freq, -step))  # Reverse steps
+        freq_steps += list(self.freqRangeDown(start_freq, end_freq, step))  # Reverse steps
         
         stepcount = len(freq_steps)
         self.message(self.SET, self.funcMixGen, 1)

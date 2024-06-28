@@ -29,8 +29,10 @@ class MoRFeusQt(QMainWindow, mrfui.Ui_mRFsMain):
         self.genButton.clicked.connect(self.genQt)
         self.noiseButton.clicked.connect(self.noiseQt)
         self.sweepButton.clicked.connect(self.sweepQt)
+
         self.linearSweepButton.clicked.connect(self.linearSweepQt)
         self.quadraticSweepButton.clicked.connect(self.quadraticSweepQt)
+        
         self.biasOn.clicked.connect(self.biasOnQt)
         self.biasOff.clicked.connect(self.biasOffQt)
         self.morseButton.clicked.connect(self.sendMorse)
